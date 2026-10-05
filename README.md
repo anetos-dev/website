@@ -1,3 +1,10 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="brand/anetos-logo-dark.svg">
+    <img alt="Anetos" src="brand/anetos-logo.svg" width="240">
+  </picture>
+</p>
+
 # anetos.dev
 
 The source of [anetos.dev](https://anetos.dev), the home page of

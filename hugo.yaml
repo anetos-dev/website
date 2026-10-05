@@ -1,0 +1,93 @@
+# anetos.dev: the home page of Anetos, on Hugo and the Hextra theme.
+# Build: hugo --gc --minify (the theme is vendored in _vendor/).
+baseURL: https://anetos.dev/
+locale: en
+disableKinds: [taxonomy, term, rss]
+title: Anetos
+enableRobotsTXT: true
+enableGitInfo: false
+
+module:
+  hugoVersion:
+    min: "0.158.0"
+  imports:
+    - path: github.com/imfing/hextra
+      # the theme's own icons and logos stay out; ours are in brand/
+      mounts:
+        - { source: assets, target: assets }
+        - { source: data, target: data }
+        - { source: i18n, target: i18n }
+        - { source: layouts, target: layouts }
+        - source: static
+          target: static
+          files: ["! android-chrome-*", "! images/**"]
+  mounts:
+    - source: static
+      target: static
+    - source: brand
+      target: static/brand
+      files: ["! src/**", "! README.md"]
+    # the browser and app icons, at the site's root, where browsers look
+    - source: brand
+      target: static
+      files:
+        - favicon.ico
+        - favicon.svg
+        - favicon-16x16.png
+        - favicon-32x32.png
+        - apple-touch-icon.png
+        - icon-192.png
+        - icon-512.png
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+
+outputs:
+  home: [html]
+  page: [html]
+  section: [html]
+
+menu:
+  main:
+    - name: Docs
+      url: https://docs.anetos.dev/
+      weight: 1
+    - name: Get started
+      url: https://docs.anetos.dev/getting-started/
+      weight: 2
+    - name: GitHub
+      url: https://github.com/anetos-dev/anetos
+      weight: 3
+      params:
+        icon: github
+
+params:
+  description: Anetos is a batteries-included web framework for Go — routing, data, auth, queues, mail, storage, search, AI and i18n in one binary, built on net/http.
+  images: [brand/social-preview.png]
+  navbar:
+    displayTitle: false
+    displayLogo: true
+    logo:
+      path: brand/anetos-logo.svg
+      dark: brand/anetos-logo-dark.svg
+      width: 118
+      height: 22
+  page:
+    width: normal
+  theme:
+    default: system
+    displayToggle: true
+  footer:
+    enable: true
+    displayCopyright: true
+    displayPoweredBy: false
+  search:
+    enable: false
+  highlight:
+    copy:
+      enable: true
+      display: hover

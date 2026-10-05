@@ -7,9 +7,10 @@ The logo and icons of Anetos. Use these files rather than redrawing them.
 | `anetos-logo.svg`, `anetos-logo-dark.svg` | The mark and the name side by side: headers, READMEs (`-dark` on dark backgrounds) |
 | `anetos-logo-stacked.svg`, `anetos-logo-stacked-dark.svg` | The name under the mark: square spaces, title slides |
 | `anetos-mark.svg` | The mark alone: avatars, small spaces |
-| `favicon.svg`, `favicon.ico`, `favicon-32.png` | Browser tabs |
+| `favicon.svg`, `favicon.ico`, `favicon-16x16.png`, `favicon-32x32.png` | Browser tabs |
 | `apple-touch-icon.png` | iOS home screen (180 px, on white) |
-| `icon-512.png` | App manifests, social avatars |
+| `icon-192.png`, `icon-512.png` | Web app manifests; `icon-512.png` for avatars (the GitHub organization's, say) |
+| `social-preview.png` | Link previews (1280×640): the sites' `og:image`, the repositories' social preview on GitHub |
 
 ## Colours
 
@@ -32,7 +33,7 @@ The logo and icons of Anetos. Use these files rather than redrawing them.
 `src/build.py` draws the SVGs from the mark's geometry (two legs of equal
 thickness at 58° and 63°, the foot parallel to the left leg) and the name
 set in Varela Round, converted to outlines; `src/pngs.py` renders the
-icons from `favicon.svg`.
+icons from `favicon.svg` and the social preview from the logo.
 
 ```sh
 cd src

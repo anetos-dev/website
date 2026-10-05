@@ -1,0 +1,6 @@
+{{- /* The home page's title is its front matter's; the others' are "Title – Anetos". */ -}}
+{{- if .IsHome -}}
+  {{- .Title | default site.Title -}}
+{{- else -}}
+  {{- with .Title }}{{ . }} – {{ end }}{{ site.Title -}}
+{{- end -}}

@@ -46,8 +46,18 @@ markup:
   highlight:
     noClasses: false
 
+# security.txt (RFC 9116), from layouts/home.securitytxt.txt: written at
+# each build, so its Expires date moves forward with every deploy.
+outputFormats:
+  securitytxt:
+    mediaType: text/plain
+    baseName: security
+    path: .well-known
+    isPlainText: true
+    notAlternative: true
+
 outputs:
-  home: [html]
+  home: [html, securitytxt]
   page: [html]
   section: [html]
 

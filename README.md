@@ -34,6 +34,7 @@ hugo --gc --minify   # the site, in public/
 | `static/_redirects` | The `go get` paths (`/anetos/…` → `/go/anetos/`) and shortcuts |
 | `static/go/` | The `go-import` pages, one per module repository |
 | `static/_headers` | Response headers |
+| `layouts/home.securitytxt.txt` | `/.well-known/security.txt` (RFC 9116): where to report a vulnerability. Written at each build with an `Expires` 180 days on; `.github/workflows/rebuild.yml` rebuilds the site monthly (Cloudflare Pages deploy hook, secret `CLOUDFLARE_PAGES_DEPLOY_HOOK`) so it never lapses |
 | `assets/css/custom.css` | The colours and the home page's sections |
 
 A new Go repository under anetos.dev (`anetos.dev/twilio`, say) needs a

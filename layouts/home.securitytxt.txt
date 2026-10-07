@@ -1,0 +1,9 @@
+{{- /* security.txt (RFC 9116): how to report a vulnerability. Expires is
+  required and must be under a year away; it is set at each build, 180
+  days on, so a deploy at least every six months keeps it valid (the
+  scheduled rebuild in .github/workflows/rebuild.yml sees to it). */ -}}
+Contact: https://github.com/anetos-dev/anetos/security/advisories/new
+Expires: {{ (now.AddDate 0 0 180).UTC.Format "2006-01-02T15:04:05Z" }}
+Policy: https://github.com/anetos-dev/anetos/blob/main/SECURITY.md
+Preferred-Languages: en
+Canonical: {{ "/.well-known/security.txt" | absURL }}

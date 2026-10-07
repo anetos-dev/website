@@ -1,0 +1,30 @@
+# SPDX-License-Identifier: Apache-2.0
+# Rebuilds anetos.dev on the first of each month, through the Cloudflare
+# Pages deploy hook, so the Expires date of /.well-known/security.txt
+# (set at build time, 180 days on) never lapses between pushes. Run it by
+# hand from the Actions tab too. Set the hook's URL as the repository
+# secret CLOUDFLARE_PAGES_DEPLOY_HOOK (Cloudflare: Workers & Pages → the
+# project → Settings → Builds → Deploy hooks).
+name: Rebuild
+
+on:
+  schedule:
+    - cron: "17 3 1 * *"
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Trigger the Cloudflare Pages build
+        env:
+          HOOK: ${{ secrets.CLOUDFLARE_PAGES_DEPLOY_HOOK }}
+        run: |
+          if [ -z "$HOOK" ]; then
+            echo "::error::Set the repository secret CLOUDFLARE_PAGES_DEPLOY_HOOK to the project's deploy hook URL"
+            exit 1
+          fi
+          curl -fsS -X POST "$HOOK" >/dev/null

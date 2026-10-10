@@ -6,7 +6,7 @@ description: Anetos is a batteries-included web framework for Go — routing, da
 
 <div class="hx:mt-6 hx:mb-6">
 {{< hextra/hero-badge link="https://github.com/anetos-dev/anetos/blob/main/docs/planning/roadmap.md" >}}
-  Pre-release · v0.3 on its way
+  Pre-release · v0.5 on its way
   {{< icon name="arrow-circle-right" attributes="height=14" >}}
 {{< /hextra/hero-badge >}}
 </div>
@@ -49,7 +49,7 @@ go build -o blog . && ./blog   # web, queue workers and the scheduler, in one bi
 
 ## Batteries included, Go all the way
 
-<p class="anetos-lead">Typed handlers and models, generated code instead of reflection at run time, and plain <code>net/http</code> underneath: the comfort of Laravel or Rails, without leaving Go's way of doing things.</p>
+<p class="anetos-lead">Typed handlers and models, generated code instead of reflection on every request, and plain <code>net/http</code> underneath: the comfort of Laravel or Rails, without leaving Go's way of doing things.</p>
 
 {{< hextra/feature-grid >}}
   {{< hextra/feature-card
@@ -61,25 +61,25 @@ go build -o blog . && ./blog   # web, queue workers and the scheduler, in one bi
   {{< hextra/feature-card
     icon="database"
     title="Data, typed"
-    subtitle="A query builder with generated columns, relations without N+1, migrations and seeders on PostgreSQL, MySQL, MariaDB and SQLite."
+    subtitle="A query builder with typed columns, relations without N+1, migrations and seeders on PostgreSQL, MySQL, MariaDB and SQLite."
     link="https://docs.anetos.dev/guides/database/"
   >}}
   {{< hextra/feature-card
     icon="user-group"
     title="Accounts and permissions"
-    subtitle="Login with passwords, Google and GitHub, API tokens, email verification, and roles per app or per team."
+    subtitle="Log in with passwords, Google and GitHub, API tokens, email verification, and roles per app or per team."
     link="https://docs.anetos.dev/guides/accounts/"
   >}}
   {{< hextra/feature-card
     icon="lightning-bolt"
     title="Work in the background"
-    subtitle="Queues, events, pub/sub listeners and a scheduler, supervised in the same binary — or split by role when you scale."
+    subtitle="Queues, events, pub/sub listeners and a scheduler, supervised in the same binary — or split by process type when you scale."
     link="https://docs.anetos.dev/guides/queues/"
   >}}
   {{< hextra/feature-card
     icon="sparkles"
     title="AI in the app"
-    subtitle="Typed model calls, tools that act as the user, streamed answers, stored conversations and budgets: Anthropic, OpenAI and Gemini."
+    subtitle="Typed LLM calls, tools that act as the user, streamed answers, stored conversations and budgets: Anthropic, OpenAI and Gemini."
     link="https://docs.anetos.dev/guides/ai/"
   >}}
   {{< hextra/feature-card
@@ -141,6 +141,6 @@ r.Post("/notes", web.H(h.Create)).Name("notes.create")
 
 ## Status
 
-<p class="anetos-lead">Anetos is pre-release: v0.3, the first public version, is in progress, and APIs will change until 1.0. Follow along or help on <a href="https://github.com/anetos-dev/anetos">GitHub</a>; the <a href="https://github.com/anetos-dev/anetos/blob/main/docs/planning/roadmap.md">roadmap</a> says what's done and what's next.</p>
+<p class="anetos-lead">Anetos is pre-release: v0.5, the first public release, is being finished, and APIs will change until 1.0. Follow along or help on <a href="https://github.com/anetos-dev/anetos">GitHub</a>; the <a href="https://github.com/anetos-dev/anetos/blob/main/docs/planning/roadmap.md">roadmap</a> says what's done and what's next.</p>
 
 </div>

@@ -124,7 +124,7 @@ type CreateNote struct {
 	Tags  []string `json:"tags" validate:"max:5|distinct|alpha_dash"`
 }
 
-func (h *Notes) Store(c *web.Ctx, in CreateNote) (web.Responder, error) {
+func (h *Notes) Create(c *web.Ctx, in CreateNote) (web.Responder, error) {
 	note := &Note{Title: in.Title, Body: in.Body, Tags: in.Tags}
 	if err := db.Create(c, note); err != nil {
 		return nil, err
@@ -132,7 +132,7 @@ func (h *Notes) Store(c *web.Ctx, in CreateNote) (web.Responder, error) {
 	return web.Created(note), nil // 201, as JSON
 }
 
-r.Post("/notes", web.H(h.Store)).Name("notes.store")
+r.Post("/notes", web.H(h.Create)).Name("notes.create")
 ```
 
 </div>

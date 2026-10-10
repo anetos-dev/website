@@ -67,7 +67,7 @@ go build -o blog . && ./blog   # web, queue workers and the scheduler, in one bi
   {{< hextra/feature-card
     icon="user-group"
     title="Accounts and permissions"
-    subtitle="Sign-in with passwords, Google and GitHub, API tokens, email verification, and roles per app or per team."
+    subtitle="Login with passwords, Google and GitHub, API tokens, email verification, and roles per app or per team."
     link="https://docs.anetos.dev/guides/accounts/"
   >}}
   {{< hextra/feature-card

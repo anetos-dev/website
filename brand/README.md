@@ -4,7 +4,8 @@ The logo and icons of Anetos. Use these files rather than redrawing them.
 
 | File | Use |
 |---|---|
-| `anetos-logo.svg`, `anetos-logo-dark.svg` | The mark and the name side by side: headers, READMEs (`-dark` on dark backgrounds) |
+| `anetos-logo.svg`, `anetos-logo-dark.svg` | The mark and the name side by side: headers (`-dark` on dark backgrounds) |
+| `anetos-logo-neutral.svg` | The same, with the name in a grey readable on light and dark backgrounds: where the page can't follow the reader's theme reliably, such as GitHub READMEs (a `<picture>` there follows the system's setting, not GitHub's) |
 | `anetos-logo-stacked.svg`, `anetos-logo-stacked-dark.svg` | The name under the mark: square spaces, title slides |
 | `anetos-mark.svg` | The mark alone: avatars, small spaces |
 | `favicon.svg`, `favicon.ico`, `favicon-16x16.png`, `favicon-32x32.png` | Browser tabs |

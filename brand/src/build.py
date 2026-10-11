@@ -16,6 +16,11 @@ FONT = os.path.join(HERE, "VarelaRound-Regular.ttf")
 BLUE = "#4B9AD2"
 TEXT = "#545454"
 TEXT_DARK = "#E8E8E8"
+# Readable on light and dark backgrounds alike (about 4.3:1 on white and
+# on GitHub's dark #0d1117): for places that can't follow the reader's
+# theme, such as GitHub READMEs, whose <picture> follows the system's
+# setting, not GitHub's.
+TEXT_NEUTRAL = "#7A7A7A"
 
 # ---- the mark: H = 100 units ----
 SL, SR = 1.6, 2.0          # slopes (rise/run) of the left and right legs
@@ -114,7 +119,7 @@ write("anetos-mark.svg", svg(MARK_W, 100, f'<path fill="{BLUE}" d="{mark_path()}
 # horizontal: name beside the mark, baseline on the mark's bottom
 CAP_H = 85.5        # cap height, in mark units (sketch)
 GAP_H = 33.6
-for variant, color in (("", TEXT), ("-dark", TEXT_DARK)):
+for variant, color in (("", TEXT), ("-dark", TEXT_DARK), ("-neutral", TEXT_NEUTRAL)):
     tx = MARK_W + GAP_H
     _, lo, hi = text_path("Anetos", 0, 0, CAP_H)
     d, _, _ = text_path("Anetos", tx - lo, 100, CAP_H)

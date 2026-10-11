@@ -1,8 +1,5 @@
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="brand/anetos-logo-dark.svg">
-    <img alt="Anetos" src="brand/anetos-logo.svg" width="240">
-  </picture>
+  <img alt="Anetos" src="brand/anetos-logo-neutral.svg" width="240">
 </p>
 
 # anetos.dev

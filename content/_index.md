@@ -49,7 +49,7 @@ go build -o blog . && ./blog   # web, queue workers and the scheduler, in one bi
 
 ## Batteries included, Go all the way
 
-<p class="anetos-lead">Typed handlers and models, generated code instead of reflection on every request, and plain <code>net/http</code> underneath: the comfort of Laravel or Rails, without leaving Go's way of doing things.</p>
+<p class="anetos-lead">Typed handlers and models, generated code instead of reflection on every request, and plain <code>net/http</code> underneath: quick to start and to build with, without leaving Go's way of doing things.</p>
 
 {{< hextra/feature-grid >}}
   {{< hextra/feature-card

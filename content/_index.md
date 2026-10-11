@@ -33,7 +33,7 @@ description: Anetos is a batteries-included web framework for Go — routing, da
 ## From zero to an app with accounts
 
 ```sh
-go install anetos.dev/anetos/cli/cmd/anetos@latest
+go install anetos.dev/anetos/cli/cmd/anetos@v0.5.0-rc.1
 
 anetos new blog && cd blog # templ views, sessions, CSRF, SQLite by default
 go tool anetos make:auth   # accounts: password, Google, GitHub, API tokens

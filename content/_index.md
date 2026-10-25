@@ -5,8 +5,8 @@ description: Anetos is a batteries-included web framework for Go — routing, da
 ---
 
 <div class="hx:mt-6 hx:mb-6">
-{{< hextra/hero-badge link="https://github.com/anetos-dev/anetos/blob/main/docs/planning/roadmap.md" >}}
-  Pre-release · v0.5 on its way
+{{< hextra/hero-badge link="news/v0.5/" >}}
+  v0.5, the first public release, is out
   {{< icon name="arrow-circle-right" attributes="height=14" >}}
 {{< /hextra/hero-badge >}}
 </div>
@@ -33,7 +33,7 @@ description: Anetos is a batteries-included web framework for Go — routing, da
 ## From zero to an app with accounts
 
 ```sh
-go install anetos.dev/anetos/cli/cmd/anetos@v0.5.0-rc.1
+go install anetos.dev/anetos/cli/cmd/anetos@latest
 
 anetos new blog && cd blog # templ views, sessions, CSRF, SQLite by default
 go tool anetos make:auth   # accounts: password, Google, GitHub, API tokens
@@ -141,6 +141,6 @@ r.Post("/notes", web.H(h.Create)).Name("notes.create")
 
 ## Status
 
-<p class="anetos-lead">Anetos is pre-release: v0.5, the first public release, is being finished, and APIs will change until 1.0. Follow along or help on <a href="https://github.com/anetos-dev/anetos">GitHub</a>; the <a href="https://github.com/anetos-dev/anetos/blob/main/docs/planning/roadmap.md">roadmap</a> says what's done and what's next.</p>
+<p class="anetos-lead">Anetos is early: v0.5 is the first public release (<a href="news/v0.5/">what's in it</a>), and APIs will change until 1.0. Follow along or help on <a href="https://github.com/anetos-dev/anetos">GitHub</a>; the <a href="https://github.com/anetos-dev/anetos/blob/main/docs/planning/roadmap.md">roadmap</a> says what's done and what's next.</p>
 
 </div>
